@@ -1,0 +1,31 @@
+/* here the burt force method is to check each element whether its repated or not 
+
+and the another metod is to create matrix with same length and when ever you encounter the elemnt go to that index and change zero to one 
+when you go and check ones again in the given index if you find the value as one then that means its repated 
+
+and the effectinent one is to use the fast and slow pointer method were one pointer moves two step and the other moves one step ones they meet at one point 
+move the fast pointer to first element after that move both the pointer one step forwared the point were they meet is the value you needed 
+
+
+
+  */
+//its a java code 
+
+
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int slow=nums[0];
+        int fast=nums[0];
+        do{
+            slow=nums[slow];
+            fast=nums[nums[fast]];
+        }while(fast!=slow);
+        fast=nums[0];
+        while(fast!=slow){
+            fast=nums[fast];
+            slow=nums[slow];
+        }
+    
+        return slow;
+    }
+}
