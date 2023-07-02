@@ -1,0 +1,13 @@
+git init 
+
+ git status
+
+ git add.
+
+ git commit -m " "
+
+ git remote -v
+
+ git push -u origin main
+
+
